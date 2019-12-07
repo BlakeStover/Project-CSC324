@@ -1,0 +1,27 @@
+<% include partial/head %>
+<% include partial/header %>
+<div class="header">
+            <h1>Members Only Area</h1>
+            <h2>... Welcome, <%- username %>!</h2>
+        </div>
+<div class="content">
+  
+  <h2>The Secret</h2>
+    <p>
+      There is a secret ritual on the football field at midnight after the spring game each year.
+    </p>
+
+  <% if (role === "administrator") { %>
+    <h2>Get Subscribers</h2>
+    <p>
+      As an administrator, you can request a CSV file of all subscribers.
+    </p>
+    <form method="get" action="/download">
+      <button type="submit" class="pure-button pure-button-primary">Get Subscribers</button>
+   </form>
+  <% } %>
+            
+        </div>
+        <% include partial/footer %>
+
+<% include partial/end %>
